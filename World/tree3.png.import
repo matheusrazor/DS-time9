@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/concreteBackground64.png-38e80e919d527b8618a468f610a5a714.stex"
+path="res://.import/tree3.png-9a16dc08b38cfd074f55bbcb0a7673ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/concreteBackground64.png"
-dest_files=[ "res://.import/concreteBackground64.png-38e80e919d527b8618a468f610a5a714.stex" ]
+source_file="res://World/tree3.png"
+dest_files=[ "res://.import/tree3.png-9a16dc08b38cfd074f55bbcb0a7673ca.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
