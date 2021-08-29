@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carTopViewWing.png-39a1a5930ce7e7ff0e21ca7bebf4bf2e.stex"
+path="res://.import/playerRunningFront.png-8ba8d49ad485652ebe53d6d6d1229a48.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/carTopViewWing.png"
-dest_files=[ "res://.import/carTopViewWing.png-39a1a5930ce7e7ff0e21ca7bebf4bf2e.stex" ]
+source_file="res://Player/playerRunningFront.png"
+dest_files=[ "res://.import/playerRunningFront.png-8ba8d49ad485652ebe53d6d6d1229a48.stex" ]
 
 [params]
 

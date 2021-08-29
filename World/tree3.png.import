@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carTopViewWing.png-39a1a5930ce7e7ff0e21ca7bebf4bf2e.stex"
+path="res://.import/tree3.png-9a16dc08b38cfd074f55bbcb0a7673ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/carTopViewWing.png"
-dest_files=[ "res://.import/carTopViewWing.png-39a1a5930ce7e7ff0e21ca7bebf4bf2e.stex" ]
+source_file="res://World/tree3.png"
+dest_files=[ "res://.import/tree3.png-9a16dc08b38cfd074f55bbcb0a7673ca.stex" ]
 
 [params]
 

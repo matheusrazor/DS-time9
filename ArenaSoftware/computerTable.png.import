@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/carTopViewWing.png-39a1a5930ce7e7ff0e21ca7bebf4bf2e.stex"
+path="res://.import/computerTable.png-81eac5cb845d3da95c712b7e7884a54f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/carTopViewWing.png"
-dest_files=[ "res://.import/carTopViewWing.png-39a1a5930ce7e7ff0e21ca7bebf4bf2e.stex" ]
+source_file="res://ArenaSoftware/computerTable.png"
+dest_files=[ "res://.import/computerTable.png-81eac5cb845d3da95c712b7e7884a54f.stex" ]
 
 [params]
 
