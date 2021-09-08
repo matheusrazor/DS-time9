@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://menu/VideoFundoMenu2.webm" type="VideoStream" id=1]
+[ext_resource path="res://menu/VideoPlayer.gd" type="Script" id=2]
+[ext_resource path="res://menu/Novo Jogo.png" type="Texture" id=3]
+[ext_resource path="res://menu/start.gd" type="Script" id=4]
+[ext_resource path="res://menu/options.gd" type="Script" id=5]
+[ext_resource path="res://menu/Opçoes.png" type="Texture" id=6]
+[ext_resource path="res://menu/credits.gd" type="Script" id=7]
+[ext_resource path="res://menu/Creditos.png" type="Texture" id=8]
+[ext_resource path="res://menu/musica_menu.wav" type="AudioStream" id=10]
+
+[node name="menu" type="Node2D"]
+
+[node name="wallpaper" type="VideoPlayer" parent="."]
+margin_left = 1.0
+margin_right = 1078.0
+margin_bottom = 603.0
+stream = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="."]
+margin_left = 106.973
+margin_top = 281.733
+margin_right = 392.973
+margin_bottom = 353.733
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="novo_jogo" type="Sprite" parent="start"]
+position = Vector2( 151.439, 39.0552 )
+scale = Vector2( 0.271729, 0.267983 )
+texture = ExtResource( 3 )
+
+[node name="options" type="Button" parent="."]
+margin_left = 108.33
+margin_top = 386.841
+margin_right = 392.33
+margin_bottom = 454.841
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="opcoes" type="Sprite" parent="options"]
+position = Vector2( 149.761, 34.2714 )
+scale = Vector2( 0.2715, 0.25957 )
+texture = ExtResource( 6 )
+
+[node name="credits" type="Button" parent="."]
+margin_left = 109.995
+margin_top = 488.289
+margin_right = 392.995
+margin_bottom = 555.289
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="creditos" type="Sprite" parent="credits"]
+position = Vector2( 149.57, 32.4048 )
+scale = Vector2( 0.272376, 0.256197 )
+texture = ExtResource( 8 )
+
+[node name="music_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[connection signal="mouse_entered" from="start" to="start" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="start" to="start" method="_on_start_mouse_exited"]
+[connection signal="pressed" from="start" to="start" method="_on_start_pressed"]
+[connection signal="mouse_entered" from="options" to="options" method="_on_options_mouse_entered"]
+[connection signal="mouse_exited" from="options" to="options" method="_on_options_mouse_exited"]
+[connection signal="pressed" from="options" to="options" method="_on_options_pressed"]
+[connection signal="mouse_entered" from="credits" to="credits" method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="credits" to="credits" method="_on_credits_mouse_exited"]
+[connection signal="pressed" from="credits" to="credits" method="_on_credits_pressed"]
