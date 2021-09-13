@@ -17,13 +17,12 @@ enum State{
 func _ready():
 	print("Starting state: State.ready")
 	hide_texbox()
-	text_queue("Olha Macaco, eu sei que disse que iria abrir a porta pra voce mas...")
-	text_queue("Sinto muito, eu nao posso te deixar entrar, mesmo!")
-	text_queue("Porque a sala e exclusiva para alunos de software! Somente eles podem entrar!")
-	text_queue("Olha, voce nao vai mais precisar entrar porque EU mesmo entrei e peguei a parte pra voce!")
-	text_queue("Por nada! Bem, se voce escolher ser um engenheiro de software, quem sabe daqui uns anos voce nao entra aqui, hein?")
-	text_queue("Se eu nao me engano, eu vi algumas coisas voando para o lado das arenas de eletronica e de energia...E Macaco... ")
-	text_queue("MUITA sorte por la, o Bode e a Galinha sao bem dificeis... Tchau!")
+	text_queue("Pronto, Morcego! Agora vou poder pegar a parte do meu carro, certo?")
+	text_queue("O que? Mas por que, Morcego?")
+	text_queue("Mas voce prometeu que iria me deixar entrar...")
+	text_queue("Poxa... Muito obrigado, Morcego! Mas fiquei curioso para entrar nessa arena...")
+	text_queue(": Hahaha! Antes de eu ir atras das outras partes... Voce teria ideia de onde posso encontra-las?")
+	text_queue("Tchau, Morcego! Obrigado pela dica... Eu acho...")
 	
 func _process(delta):
 	match current_state: 
