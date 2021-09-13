@@ -17,12 +17,9 @@ enum State{
 func _ready():
 	print("Starting state: State.ready")
 	hide_texbox()
-	text_queue("Ah sim... eu vi uma parte como essa voar para dentro dessa sala.")
-	text_queue("Espera, espera, espera! Eu nao posso, de jeito nenhum, deixar voce entrar aqui!")
-	text_queue("Essa sala é exclusiva para os alunos de software!")
-	text_queue("Bom... Hm... Eu posso te ajudar se voce me ajudar, o que acha?")
-	text_queue("Estou tendo um problema com o meu codigo, um erro de compilacao maligno tomou conta dele!")
-	text_queue("Me ajude a resolver esse problema e eu penso se abro a porta para voce ou nao...")
+	text_queue("De uma volta pela arena de software para buscar dicas que irao te ajudar a resolver o desafio.")
+	text_queue("Assim como curiosidades sobre a propria engenharia de software.")
+	text_queue("Quando estiver pronto, interaja com o computador para comecar o minijogo")
 	
 func _process(delta):
 	match current_state: 
@@ -75,6 +72,3 @@ func change_state(next_state):
 			print("Changing state to: State.reading")
 		State.finished:
 			print("Changing state to: State.finished")
-
-
-

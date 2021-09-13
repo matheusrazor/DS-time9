@@ -38,8 +38,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="chitchat_bat&monkey"
-run/main_scene="res://Chitchat.tscn"
+config/name="Warning_part2"
 config/icon="res://icon.png"
 
 [autoload]
