@@ -17,10 +17,11 @@ enum State{
 func _ready():
 	print("Starting state: State.ready")
 	hide_texbox()
-	text_queue("Poxa vida! O motor do meu carro parou de funcionar de vez!")
-	text_queue("A queda foi tao feia que ele esta todo quebrado!")
-	text_queue("Suas partes voaram para todos os lugares nessa floresta...")
-	text_queue("Para onde foram? Como vou fazer para montar meu carro de novo para ir para casa?")
+	text_queue("Estou, mas meu carro nao... Esta todo quebrado, um caos")
+	text_queue("Bem grande? Oh nao! O que eu posso fazer entao??")
+	text_queue("Caramba, eu adoraria! Muito obrigado, Coelho!")
+	text_queue("Arena de software? Como assim?")
+	text_queue("Isso vai ser uma grande aventura... Obrigado pelas dicas, Coelho, ate mais!")
 	
 func _process(delta):
 	match current_state: 
