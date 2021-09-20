@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://menu/minecraft/Minecraft.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://menu/_8-BIT 귀요미 - Hari_160k (online-audio-converter.com).wav" type="AudioStream" id=2]
+[ext_resource path="res://menu/Label.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 1 )
+
+[node name="credits" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1282.0
+margin_bottom = 727.0
+size_flags_horizontal = 5
+custom_fonts/font = SubResource( 1 )
+text = "Membros
+
+Lider
+Geovanna Maciel Avelino da Costa
+
+Product Owner
+Matheus Raphael Soares de Oliveira
+
+Front-End
+Arthur Henrique Amaral Santana
+
+Full-Stack
+Gabriel Evaristo de Sousa
+Maria Eduarda Dos Santos Abritta Ferreira
+Breno Henrique De Souza
+
+Agradecimentos Especiais
+
+Professor Sergio
+Monitor Andre
+
+Sobre o Projeto
+
+Esse jogo foi criado como projeto do grupo 9 da materia 
+de desenvolvimento de software do professor Sergio da Unb - FGA
+O projeto teve como objetivo apresentar de forma dinamica e divertida
+as engenharias que estao presentes na unidade UnB do Gama."
+align = 1
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="music_final" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[connection signal="finished" from="music_final" to="music_final" method="_on_music_final_finished"]
