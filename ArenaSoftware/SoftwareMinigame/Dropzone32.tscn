@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareNegativeBlock32BIG.png" type="Texture" id=1]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone32.gd" type="Script" id=2]
+
+[node name="Dropzone32_1" type="Position2D" groups=[
+"zone32",
+]]
+position = Vector2( 100, 100 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -2 )

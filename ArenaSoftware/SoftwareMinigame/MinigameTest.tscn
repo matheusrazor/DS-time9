@@ -1,0 +1,136 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables64.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareConsoleBIG.png" type="Texture" id=2]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/M5X7Font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone48.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables32.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone32.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables48.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone64.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables16.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone16.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default32.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default16_2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables16_2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default48.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default16.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default64.tscn" type="PackedScene" id=16]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables32_2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default32_2.tscn" type="PackedScene" id=18]
+
+[node name="Node2D" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
+
+[node name="softwareConsoleBIG" type="Sprite" parent="."]
+position = Vector2( 618.549, 377.822 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, 22 )
+
+[node name="Label" type="Label" parent="softwareConsoleBIG"]
+margin_left = -495.0
+margin_top = -137.0
+margin_right = 316.0
+margin_bottom = 179.0
+custom_fonts/font = ExtResource( 3 )
+text = "#include <stdio.h>
+int main() { 
+
+int a = 2, b = 3;
+            (%d, a + b);"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggables2" parent="." instance=ExtResource( 5 )]
+light_mask = 4
+position = Vector2( 318.198, 579.828 )
+z_index = 2
+
+[node name="Label" type="Label" parent="Draggables2"]
+margin_left = -52.0
+margin_top = -13.0
+margin_right = 52.0
+margin_bottom = 17.0
+custom_fonts/font = ExtResource( 3 )
+text = "printf"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dropzone32" parent="." instance=ExtResource( 6 )]
+position = Vector2( 320.617, 477.595 )
+
+[node name="Dropzone33" parent="." instance=ExtResource( 6 )]
+position = Vector2( 178.012, 361.213 )
+
+[node name="Position2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 205.733, 399.574 )
+
+[node name="Node2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 493.521, 579.144 )
+
+[node name="Label" type="Label" parent="Node2D"]
+margin_left = -80.0
+margin_top = -14.0
+margin_right = 80.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 3 )
+text = "int res = a + b;"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggable64_1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 712.335, 579.144 )
+
+[node name="Dropzone64_1" parent="." instance=ExtResource( 8 )]
+position = Vector2( 302.059, 437.628 )
+
+[node name="Dropzone16_1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 149.84, 519.684 )
+
+[node name="Draggables16_1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 147.462, 618.388 )
+
+[node name="Label" type="Label" parent="Draggables16_1"]
+margin_left = -25.0
+margin_top = -15.0
+margin_right = 25.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 3 )
+text = "}"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dropzone16_2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 319.897, 399.574 )
+
+[node name="Default32_1" parent="." instance=ExtResource( 11 )]
+position = Vector2( 317.48, 617.499 )
+
+[node name="Default16" parent="." instance=ExtResource( 15 )]
+position = Vector2( 210.718, 619.425 )
+
+[node name="Default48" parent="." instance=ExtResource( 14 )]
+position = Vector2( 475.176, 579.827 )
+
+[node name="Default64" parent="." instance=ExtResource( 16 )]
+position = Vector2( 632.153, 618.011 )
+
+[node name="Default32_2" parent="." instance=ExtResource( 18 )]
+position = Vector2( 178.471, 579.19 )
+
+[node name="Draggables32_2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 450.107, 613.987 )
+
+[node name="Default16_2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 782.356, 617.354 )
+
+[node name="Draggables16_2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 828.729, 616.597 )

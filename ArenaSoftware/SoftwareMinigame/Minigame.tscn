@@ -1,0 +1,256 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareConsoleAttBG_BIG.png" type="Texture" id=1]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/M5X7Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone48.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone16.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default48.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default32.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default32_2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default16_2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone32.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default16.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default64.tscn" type="PackedScene" id=11]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Dropzone64.tscn" type="PackedScene" id=12]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables32.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables32_2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables16_2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables64.tscn" type="PackedScene" id=16]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables16.tscn" type="PackedScene" id=17]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Draggables48.tscn" type="PackedScene" id=18]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareCompileAnimationFAILED.png" type="Texture" id=19]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareCompileAnimationPASSED.png" type="Texture" id=20]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareButtonCompileBIG.png" type="Texture" id=21]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareButtonResetBIG.png" type="Texture" id=22]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Animations.gd" type="Script" id=23]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Minigame.gd" type="Script" id=24]
+
+[sub_resource type="Animation" id=1]
+resource_name = "PassedAnim"
+length = 3.5
+step = 0.167
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.167, 0.334, 0.501, 0.668, 0.835, 1.002, 1.169, 1.336, 1.503, 1.67, 1.837, 2.004, 2.171, 2.338, 2.505, 2.672, 2.839, 3.006, 3.173, 3.34 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "FailedAnim"
+length = 3.5
+step = 0.167
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.167, 0.334, 0.501, 0.668, 0.835, 1.002, 1.169, 1.336, 1.503, 1.67, 1.837, 2.004, 2.171, 2.338, 2.505, 2.672, 2.839, 3.006, 3.173, 3.34 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+}
+
+[node name="Minigame" type="Node2D"]
+script = ExtResource( 24 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="FakeCode" type="Label" parent="Background"]
+margin_left = 142.0
+margin_top = 248.0
+margin_right = 960.0
+margin_bottom = 557.0
+custom_fonts/font = ExtResource( 2 )
+text = " #include <stdio.h>
+ main ( ) {
+      boolean  ignicao = false;
+      int  numero, outro_numero;
+      scanf    (\"%d %d , &numero, &outro_numero );
+      if ((x + y) >= 12) {
+ 	         ignicao = true;
+      }
+      if (ignicao) {
+          printf   (\"Ligar carro\");
+      }
+ }"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CompileButton" type="Button" parent="."]
+margin_left = 634.286
+margin_top = 176.895
+margin_right = 786.286
+margin_bottom = 222.895
+icon = ExtResource( 21 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResetButton" type="Button" parent="."]
+margin_left = 793.85
+margin_top = 177.098
+margin_right = 945.85
+margin_bottom = 223.098
+icon = ExtResource( 22 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animations" type="Area2D" parent="."]
+script = ExtResource( 23 )
+
+[node name="PassedAnimation" type="Sprite" parent="Animations"]
+position = Vector2( 1039.81, 400.014 )
+texture = ExtResource( 20 )
+hframes = 21
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animations/PassedAnimation"]
+anims/PassedAnim = SubResource( 1 )
+
+[node name="FailedAnimation" type="Sprite" parent="Animations"]
+position = Vector2( 1040.03, 400.092 )
+texture = ExtResource( 19 )
+hframes = 21
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Animations/FailedAnimation"]
+anims/FailedAnim = SubResource( 2 )
+
+[node name="Dropzone16_2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 413.455, 416.906 )
+
+[node name="Dropzone16_1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 170.152, 540.61 )
+
+[node name="Dropzone32_2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 319.843, 364.588 )
+
+[node name="Dropzone32_1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 269.528, 497.356 )
+
+[node name="Dropzone48_1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 578.951, 364.049 )
+
+[node name="Dropzone64_1" parent="." instance=ExtResource( 12 )]
+position = Vector2( 253.729, 258.961 )
+
+[node name="Default64" parent="." instance=ExtResource( 11 )]
+position = Vector2( 270.078, 581.451 )
+
+[node name="Default48" parent="." instance=ExtResource( 5 )]
+position = Vector2( 370.581, 618.777 )
+
+[node name="Default32_1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 214.17, 618.777 )
+
+[node name="Default16" parent="." instance=ExtResource( 10 )]
+position = Vector2( 498.803, 618.777 )
+
+[node name="Default32_2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 454.684, 581.451 )
+
+[node name="Default16_2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 555.061, 581.022 )
+
+[node name="Draggable64_1" parent="." instance=ExtResource( 16 )]
+position = Vector2( 269.95, 581.522 )
+
+[node name="Label" type="Label" parent="Draggable64_1"]
+margin_left = -107.0
+margin_top = -15.0
+margin_right = 109.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 2 )
+text = "#include <stdio.h>"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggables48_1" parent="." instance=ExtResource( 18 )]
+position = Vector2( 369.843, 618.388 )
+
+[node name="Label" type="Label" parent="Draggables48_1"]
+margin_left = -83.0
+margin_top = -15.0
+margin_right = 84.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 2 )
+text = "&outro_numero"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggables32_1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 214.057, 618.388 )
+
+[node name="Label" type="Label" parent="Draggables32_1"]
+margin_left = -52.0
+margin_top = -15.0
+margin_right = 53.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 2 )
+text = "(\"%d %d\""
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggables32_2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 455.466, 581.522 )
+
+[node name="Label" type="Label" parent="Draggables32_2"]
+margin_left = -52.0
+margin_top = -15.0
+margin_right = 53.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 2 )
+text = "printf"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggables16_1" parent="." instance=ExtResource( 17 )]
+position = Vector2( 498.278, 618.388 )
+
+[node name="Label" type="Label" parent="Draggables16_1"]
+margin_left = -23.0
+margin_top = -14.0
+margin_right = 25.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 2 )
+text = ";"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Draggables16_2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 555.36, 581.522 )
+
+[node name="Label" type="Label" parent="Draggables16_2"]
+margin_left = -23.0
+margin_top = -15.0
+margin_right = 23.0
+margin_bottom = 15.0
+custom_fonts/font = ExtResource( 2 )
+text = "}"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
