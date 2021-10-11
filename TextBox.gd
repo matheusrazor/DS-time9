@@ -17,6 +17,7 @@ enum State{
 func _ready():
 	print("Starting state: State.ready")
 	hide_texbox()
+
 	text_queue("Nossa! Eu vim saltitando quando vi o acidente, fez um baita barulho! Voce esta bem?")
 	text_queue("Eu vi partes voando para todos os lados, infelizmente... Seria impossivel pra voce achar todas sozinho.")
 	text_queue("A floresta das engenharias e bem grande... e voce tem que tomar certos cuidados...")

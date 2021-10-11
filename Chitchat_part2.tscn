@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://playerHead.png" type="Texture" id=1]
+[ext_resource path="res://Box/Box.png" type="Texture" id=2]
+[ext_resource path="res://Box/DownArrow.png" type="Texture" id=3]
+[ext_resource path="res://TextBox2.gd" type="Script" id=4]
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 5 )
+
+[node name="Chitchat_part2" type="Node2D"]
+
+[node name="TextBox" type="CanvasLayer" parent="."]
+script = ExtResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox"]
+margin_left = 139.0
+margin_top = 313.0
+margin_right = 880.0
+margin_bottom = 464.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="TextBox/MarginContainer"]
+margin_right = 741.0
+margin_bottom = 151.0
+
+[node name="Box" type="Sprite" parent="TextBox/MarginContainer/Panel"]
+position = Vector2( 373.009, 83.149 )
+scale = Vector2( 6.362, 5.209 )
+texture = ExtResource( 2 )
+
+[node name="playerHead" type="Sprite" parent="TextBox/MarginContainer/Panel/Box"]
+position = Vector2( 51.2432, -17.8948 )
+scale = Vector2( 0.567504, 0.662379 )
+texture = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBox/MarginContainer/Panel"]
+margin_left = 39.0
+margin_top = 20.0
+margin_right = 702.0
+margin_bottom = 132.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextBox/MarginContainer/Panel/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_right = 589.0
+margin_bottom = 112.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 1 )
+text = "Text"
+autowrap = true
+
+[node name="DownArrow" type="Sprite" parent="TextBox/MarginContainer/Panel/HBoxContainer/Label"]
+position = Vector2( -11.861, 11.202 )
+scale = Vector2( 3.397, 3.228 )
+texture = ExtResource( 3 )
+
+[node name="End" type="Label" parent="TextBox/MarginContainer/Panel/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 593.0
+margin_top = 81.0
+margin_right = 663.0
+margin_bottom = 112.0
+size_flags_vertical = 12
+custom_fonts/font = SubResource( 2 )
+text = "Next"
+
+[node name="Tween" type="Tween" parent="TextBox"]

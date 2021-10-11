@@ -1,6 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://menu/VideoFundoMenu2.webm" type="VideoStream" id=1]
+[ext_resource path="res://menu/VideoFundoMenu2_1280x720.webm" type="VideoStream" id=1]
+
 [ext_resource path="res://menu/VideoPlayer.gd" type="Script" id=2]
 [ext_resource path="res://menu/Novo Jogo.png" type="Texture" id=3]
 [ext_resource path="res://menu/start.gd" type="Script" id=4]
@@ -13,9 +14,13 @@
 [node name="menu" type="Node2D"]
 
 [node name="wallpaper" type="VideoPlayer" parent="."]
-margin_left = 1.0
-margin_right = 1078.0
-margin_bottom = 603.0
+
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 1279.0
+margin_bottom = 717.0
+
+
 stream = ExtResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -23,48 +28,56 @@ __meta__ = {
 }
 
 [node name="start" type="Button" parent="."]
-margin_left = 106.973
-margin_top = 281.733
-margin_right = 392.973
-margin_bottom = 353.733
+
+margin_left = 95.0
+margin_top = 322.0
+margin_right = 417.0
+margin_bottom = 420.0
+
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="novo_jogo" type="Sprite" parent="start"]
-position = Vector2( 151.439, 39.0552 )
-scale = Vector2( 0.271729, 0.267983 )
+
+position = Vector2( 166.901, 47.7519 )
+scale = Vector2( 0.299, 0.311477 )
 texture = ExtResource( 3 )
 
 [node name="options" type="Button" parent="."]
-margin_left = 108.33
-margin_top = 386.841
-margin_right = 392.33
-margin_bottom = 454.841
+margin_left = 95.0
+margin_top = 449.0
+margin_right = 417.0
+margin_bottom = 547.0
+
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="opcoes" type="Sprite" parent="options"]
-position = Vector2( 149.761, 34.2714 )
-scale = Vector2( 0.2715, 0.25957 )
+
+position = Vector2( 166.826, 48.3587 )
+scale = Vector2( 0.299, 0.311081 )
 texture = ExtResource( 6 )
 
 [node name="credits" type="Button" parent="."]
-margin_left = 109.995
-margin_top = 488.289
-margin_right = 392.995
-margin_bottom = 555.289
+margin_left = 95.3827
+margin_top = 575.066
+margin_right = 417.383
+margin_bottom = 673.066
+
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="creditos" type="Sprite" parent="credits"]
-position = Vector2( 149.57, 32.4048 )
-scale = Vector2( 0.272376, 0.256197 )
+
+position = Vector2( 167.55, 49.2373 )
+scale = Vector2( 0.299299, 0.309327 )
+
 texture = ExtResource( 8 )
 
 [node name="music_menu" type="AudioStreamPlayer" parent="."]

@@ -38,8 +38,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="rabbit"
-run/main_scene="res://chitchat_rabbit.tscn"
+
+config/name="Warning_part2"
+
 config/icon="res://icon.png"
 
 [autoload]

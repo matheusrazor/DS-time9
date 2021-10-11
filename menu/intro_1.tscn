@@ -1,14 +1,22 @@
-[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://menu/FirstScene.webm" type="VideoStream" id=1]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://menu/FirstScene1280x720.webm" type="VideoStream" id=1]
+[ext_resource path="res://menu/first_scene.gd" type="Script" id=2]
+
 
 [node name="intro_1" type="Node2D"]
 
 [node name="first_scene" type="VideoPlayer" parent="."]
-margin_right = 1075.0
-margin_bottom = 599.0
+
+margin_right = 1279.0
+margin_bottom = 717.0
 stream = ExtResource( 1 )
 autoplay = true
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="finished" from="first_scene" to="first_scene" method="_on_first_scene_finished"]
+

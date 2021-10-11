@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/Default48.gd" type="Script" id=1]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareCodeDefault48BIG.png" type="Texture" id=2]
+
+[node name="Default48" type="Position2D" groups=[
+"default48",
+]]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )

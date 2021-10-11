@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://World/GrassBackground.png" type="Texture" id=2]
+[ext_resource path="res://World/Tree.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/Grass.png" type="Texture" id=4]
+[ext_resource path="res://World/DirtTileset.png" type="Texture" id=5]
+[ext_resource path="res://World/carSideViewBroken.png" type="Texture" id=7]
+
+[sub_resource type="TileSet" id=1]
+0/name = "DirtTileset.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 176, 80 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 432, Vector2( 0, 1 ), 438, Vector2( 0, 2 ), 54, Vector2( 0, 3 ), 48, Vector2( 1, 0 ), 504, Vector2( 1, 1 ), 511, Vector2( 1, 2 ), 63, Vector2( 1, 3 ), 56, Vector2( 2, 0 ), 216, Vector2( 2, 1 ), 219, Vector2( 2, 2 ), 27, Vector2( 2, 3 ), 24, Vector2( 3, 0 ), 144, Vector2( 3, 1 ), 146, Vector2( 3, 2 ), 18, Vector2( 3, 3 ), 16, Vector2( 4, 0 ), 176, Vector2( 4, 1 ), 182, Vector2( 4, 2 ), 434, Vector2( 4, 3 ), 50, Vector2( 4, 4 ), 178, Vector2( 5, 0 ), 248, Vector2( 5, 1 ), 255, Vector2( 5, 2 ), 507, Vector2( 5, 3 ), 59, Vector2( 5, 4 ), 251, Vector2( 6, 0 ), 440, Vector2( 6, 1 ), 447, Vector2( 6, 2 ), 510, Vector2( 6, 3 ), 62, Vector2( 6, 4 ), 446, Vector2( 7, 0 ), 152, Vector2( 7, 1 ), 155, Vector2( 7, 2 ), 218, Vector2( 7, 3 ), 26, Vector2( 7, 4 ), 154, Vector2( 8, 0 ), 184, Vector2( 8, 1 ), 191, Vector2( 8, 2 ), 506, Vector2( 8, 3 ), 58, Vector2( 8, 4 ), 186, Vector2( 9, 0 ), 443, Vector2( 9, 1 ), 254, Vector2( 9, 2 ), 442, Vector2( 9, 3 ), 190, Vector2( 10, 2 ), 250, Vector2( 10, 3 ), 187 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 5.33427
+height = 32.3592
+
+[node name="Level 2" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 1.08158, 1.02262 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -20, 0, 316, 177 )
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 1.08158, 1.02262 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 7, 0, 0, 8, 0, 1, 9, 0, 1, 10, 0, 1, 11, 0, 2, 65542, 0, 0, 65543, 0, 131078, 65544, 0, 65541, 65545, 0, 131073, 65546, 0, 65542, 65547, 0, 131077, 65548, 0, 2, 131077, 0, 0, 131078, 0, 131078, 131079, 0, 65541, 131080, 0, 131074, 131082, 0, 131072, 131083, 0, 65542, 131084, 0, 131077, 131085, 0, 2, 196612, 0, 196608, 196613, 0, 262150, 196614, 0, 65537, 196615, 0, 65538, 196619, 0, 65536, 196620, 0, 65537, 196621, 0, 262149, 196622, 0, 196610, 262149, 0, 131072, 262150, 0, 65542, 262151, 0, 131077, 262152, 0, 2, 262154, 0, 0, 262155, 0, 131078, 262156, 0, 65541, 262157, 0, 131074, 327686, 0, 131072, 327687, 0, 65542, 327688, 0, 131077, 327689, 0, 1, 327690, 0, 131078, 327691, 0, 65541, 327692, 0, 131074, 393223, 0, 131072, 393224, 0, 65542, 393225, 0, 65537, 393226, 0, 65541, 393227, 0, 131074, 458760, 0, 131072, 458761, 0, 131073, 458762, 0, 131074 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Grass2" type="Sprite" parent="YSort"]
+position = Vector2( 145.007, 57.4032 )
+texture = ExtResource( 4 )
+
+[node name="Grass3" type="Sprite" parent="YSort"]
+position = Vector2( 164.029, 37.3806 )
+texture = ExtResource( 4 )
+
+[node name="Grass" type="Sprite" parent="YSort"]
+position = Vector2( 182.383, 57.0695 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+
+[node name="Sprite" type="Sprite" parent="YSort/StaticBody2D"]
+position = Vector2( 214.909, 118.788 )
+scale = Vector2( 1.43799, 1.52142 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/StaticBody2D"]
+position = Vector2( 215.243, 125.141 )
+rotation = -1.5708
+shape = SubResource( 2 )
+
+[node name="Tree" parent="." instance=ExtResource( 3 )]
+position = Vector2( 166.383, 73.4032 )

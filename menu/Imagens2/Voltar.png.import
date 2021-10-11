@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Voltar.png-2de73be67944d69e903d4f696e6c5eaa.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://menu/Imagens2/Voltar.png"
+dest_files=[ "res://.import/Voltar.png-2de73be67944d69e903d4f696e6c5eaa.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
