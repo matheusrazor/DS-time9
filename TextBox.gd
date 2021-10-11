@@ -17,13 +17,14 @@ enum State{
 func _ready():
 	print("Starting state: State.ready")
 	hide_texbox()
-	text_queue("Olha Macaco, eu sei que disse que iria abrir a porta pra voce mas...")
-	text_queue("Sinto muito, eu nao posso te deixar entrar, mesmo!")
-	text_queue("Porque a sala e exclusiva para alunos de software! Somente eles podem entrar!")
-	text_queue("Olha, voce nao vai mais precisar entrar porque EU mesmo entrei e peguei a parte pra voce!")
-	text_queue("Por nada! Bem, se voce escolher ser um engenheiro de software, quem sabe daqui uns anos voce nao entra aqui, hein?")
-	text_queue("Se eu nao me engano, eu vi algumas coisas voando para o lado das arenas de eletronica e de energia...E Macaco... ")
-	text_queue("MUITA sorte por la, o Bode e a Galinha sao bem dificeis... Tchau!")
+
+	text_queue("Nossa! Eu vim saltitando quando vi o acidente, fez um baita barulho! Voce esta bem?")
+	text_queue("Eu vi partes voando para todos os lados, infelizmente... Seria impossivel pra voce achar todas sozinho.")
+	text_queue("A floresta das engenharias e bem grande... e voce tem que tomar certos cuidados...")
+	text_queue("Para sua sorte eu conheço muito bem essa floresta, posso te ajudar! Ergh... se voce quiser, claro.")
+	text_queue("Eu vi uma das partes voando por aquele caminho ali, que da na arena de software.")
+	text_queue("Aqui nessa floresta se encontram 5 arenas, de 5 engenharias diferentes: Engenharias de Software, Eletronica, Energia, Automotiva e Aeroespacial.")
+	text_queue("Acho que vai ter de visitar todas atras das partes do seu carro... Bom, boa sorte, a gente se encontra por ai!")
 	
 func _process(delta):
 	match current_state: 
@@ -76,3 +77,4 @@ func change_state(next_state):
 			print("Changing state to: State.reading")
 		State.finished:
 			print("Changing state to: State.finished")
+
