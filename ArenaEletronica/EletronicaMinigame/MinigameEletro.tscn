@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/ledOn3.png" type="Texture" id=1]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/protoboardWiredBG_BIG.png" type="Texture" id=2]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/ledOff.png" type="Texture" id=3]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/SpinBC_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/Spin220Ohm.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/Spin100kOhm.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/Spin1MOhm.tscn" type="PackedScene" id=7]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/MinigameEletro.gd" type="Script" id=8]
+[ext_resource path="res://ArenaEletronica/EletronicaMinigame/protoboardButton.png" type="Texture" id=9]
+[ext_resource path="res://MinigameSuccess/SuccessPanel.tscn" type="PackedScene" id=10]
+
+[node name="MinigameEletro" type="Node2D"]
+script = ExtResource( 8 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ledOff" type="Sprite" parent="Background"]
+position = Vector2( 400.325, 198.441 )
+texture = ExtResource( 3 )
+
+[node name="ledOn" type="Sprite" parent="Background"]
+position = Vector2( 400.325, 197.252 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -1 )
+
+[node name="CheckButton" type="Button" parent="."]
+margin_left = 146.016
+margin_top = 21.0137
+margin_right = 270.016
+margin_bottom = 123.014
+icon = ExtResource( 9 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinBC_1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 583.901, 227.139 )
+rotation = 1.5708
+
+[node name="SpinBC_2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 783.688, 227.734 )
+rotation = 1.5708
+
+[node name="SpinBC_3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 944.231, 227.888 )
+rotation = 1.5708
+
+[node name="Spin220Ohm" parent="." instance=ExtResource( 5 )]
+position = Vector2( 544.062, 335.952 )
+rotation = -1.5708
+
+[node name="Spin100kOhm" parent="." instance=ExtResource( 6 )]
+position = Vector2( 815.797, 399.574 )
+rotation = 1.5708
+
+[node name="Spin1MOhm" parent="." instance=ExtResource( 7 )]
+position = Vector2( 976.339, 399.574 )
+
+[node name="SuccessPanel" parent="." instance=ExtResource( 10 )]
