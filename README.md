@@ -109,5 +109,13 @@ Quando realizar seu commit, escolha a branch wip. Depois de conferir se o commit
         </sub>
       </a>
     </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://www.gimp.org/images/frontpage/wilber-big.png" width="100px;" alt="GIMP"/><br>
+        <sub>
+          <b>GIMP</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
