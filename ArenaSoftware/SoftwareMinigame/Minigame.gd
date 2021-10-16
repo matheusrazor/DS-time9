@@ -1,11 +1,14 @@
 extends Node2D
 
+onready var success = $SuccessPanel
+
 var drag16
 var drag16_2
 var drag32
 var drag32_2
 var drag48
 var drag64
+var butt = 1
 
 func _ready():
 	drag16 = get_tree().get_nodes_in_group("drag16")
@@ -17,8 +20,27 @@ func _ready():
 	
 func _process(delta):
 	if get_node("CompileButton").pressed == true:
+		get_node("CompileButton").disabled = true
 		var result = passed_or_failed()
 		get_node("Animations").which_one(result)
+		if result == 0:
+			get_node("CompileButton").disabled = false
+		else:
+			get_node("ResetButton").disabled = true
+			yield(get_tree().create_timer(4.5), "timeout")
+			get_node("SuccessPanel").visible = true
+			success.play("success")
+	if get_node("ResetButton").pressed == true:
+		get_tree().reload_current_scene()
+	if get_node("InfoButton").pressed == true:
+		get_node("InfoButton").disabled = true
+		butt += 1
+		if butt % 2 == 0:
+			get_node("InfoButton/Label").visible = true
+		else:
+			get_node("InfoButton/Label").visible = false
+		yield(get_tree().create_timer(0.5), "timeout")
+		get_node("InfoButton").disabled = false
 
 func passed_or_failed():
 	var aux = 1

@@ -2,6 +2,8 @@ extends Node2D
 
 func _ready():
 	get_node("Background/ledOn").modulate = Color.transparent
+	yield(get_tree().create_timer(5.0), "timeout")
+	get_node("Label").visible = false
 
 onready var success = $SuccessPanel
 

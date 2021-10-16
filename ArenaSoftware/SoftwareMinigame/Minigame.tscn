@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareConsoleAttBG_BIG.png" type="Texture" id=1]
 [ext_resource path="res://ArenaSoftware/SoftwareMinigame/M5X7Font.tres" type="DynamicFont" id=2]
@@ -24,6 +24,8 @@
 [ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareButtonResetBIG.png" type="Texture" id=22]
 [ext_resource path="res://ArenaSoftware/SoftwareMinigame/Animations.gd" type="Script" id=23]
 [ext_resource path="res://ArenaSoftware/SoftwareMinigame/Minigame.gd" type="Script" id=24]
+[ext_resource path="res://ArenaSoftware/SoftwareMinigame/softwareButtonInfoBIG.png" type="Texture" id=25]
+[ext_resource path="res://MinigameSuccess/SuccessPanel.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Animation" id=1]
 resource_name = "PassedAnim"
@@ -87,6 +89,36 @@ text = " #include <stdio.h>
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="InfoButton" type="Button" parent="."]
+margin_left = 473.935
+margin_top = 176.988
+margin_right = 625.935
+margin_bottom = 222.988
+icon = ExtResource( 25 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="InfoButton"]
+visible = false
+margin_left = 223.0
+margin_top = 94.0
+margin_right = 486.0
+margin_bottom = 383.0
+custom_fonts/font = ExtResource( 2 )
+text = "Arraste os blocos de
+código para os espaços
+vazios.
+
+Exemplos:
+printf (\"Ajuda\") ;
+scanf (\"%d\", &variavel) ;
+if (alguma_coisa) {
+    x + y ;
+}"
+align = 3
 
 [node name="CompileButton" type="Button" parent="."]
 margin_left = 634.286
@@ -254,3 +286,6 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SuccessPanel" parent="." instance=ExtResource( 26 )]
+z_index = 2
