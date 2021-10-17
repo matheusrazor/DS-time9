@@ -9,11 +9,14 @@ onready var success = $SuccessPanel
 
 func _process(delta):
 	if get_node("CheckButton").pressed == true:
+		get_node("CheckButton").disabled = true
 		if conditions_met():
 			get_node("Background/ledOn").modulate = Color.white
-			yield(get_tree().create_timer(1.0), "timeout")
+			yield(get_tree().create_timer(1.5), "timeout")
 			get_node("SuccessPanel").visible = true
 			success.play("success")
+		else:
+			get_node("CheckButton").disabled = false
 
 func conditions_met():
 	var aux = true

@@ -1,5 +1,6 @@
 extends Node2D
 
+var compiling = false
 var selected = false
 var rest_point
 var rest_nodes = []
@@ -12,8 +13,9 @@ func _ready():
 	rest_default[0].select()
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_pressed("click") and not compiling:
 		selected = true
+		z_index = 2
 		
 func _physics_process(delta):
 	if selected:
@@ -25,6 +27,7 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT and not event.pressed:
 			selected = false
+			z_index = 1
 			var shortest_dist = 100
 			var takeaway = 1
 			for child in rest_nodes:

@@ -244,6 +244,7 @@ __meta__ = {
 
 [node name="Draggables32_2" parent="." instance=ExtResource( 14 )]
 position = Vector2( 455.466, 581.522 )
+z_index = 1
 
 [node name="Label" type="Label" parent="Draggables32_2"]
 margin_left = -52.0
@@ -274,6 +275,7 @@ __meta__ = {
 
 [node name="Draggables16_2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 555.36, 581.522 )
+z_index = 1
 
 [node name="Label" type="Label" parent="Draggables16_2"]
 margin_left = -23.0
