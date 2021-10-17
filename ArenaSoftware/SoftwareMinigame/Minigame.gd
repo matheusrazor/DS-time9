@@ -21,12 +21,26 @@ func _ready():
 func _process(delta):
 	if get_node("CompileButton").pressed == true:
 		get_node("CompileButton").disabled = true
+		get_node("ResetButton").disabled = true
+		get_node("Draggables16_1").compiling = true
+		get_node("Draggables16_2").compiling = true
+		get_node("Draggables32_1").compiling = true
+		get_node("Draggables32_2").compiling = true
+		get_node("Draggables48_1").compiling = true
+		get_node("Draggable64_1").compiling = true
 		var result = passed_or_failed()
 		get_node("Animations").which_one(result)
 		if result == 0:
+			yield(get_tree().create_timer(2.0), "timeout")
 			get_node("CompileButton").disabled = false
+			get_node("ResetButton").disabled = false
+			get_node("Draggables16_1").compiling = false
+			get_node("Draggables16_2").compiling = false
+			get_node("Draggables32_1").compiling = false
+			get_node("Draggables32_2").compiling = false
+			get_node("Draggables48_1").compiling = false
+			get_node("Draggable64_1").compiling = false
 		else:
-			get_node("ResetButton").disabled = true
 			yield(get_tree().create_timer(4.5), "timeout")
 			get_node("SuccessPanel").visible = true
 			success.play("success")
