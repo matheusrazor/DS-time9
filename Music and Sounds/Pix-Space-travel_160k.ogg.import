@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pix-Space-travel_160k.ogg-7a98b97d44d8b7609dc596f5a161ebe4.oggstr"
+
+[deps]
+
+source_file="res://ArquivosDS/Music and Sounds/Pix-Space-travel_160k.ogg"
+dest_files=[ "res://.import/Pix-Space-travel_160k.ogg-7a98b97d44d8b7609dc596f5a161ebe4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

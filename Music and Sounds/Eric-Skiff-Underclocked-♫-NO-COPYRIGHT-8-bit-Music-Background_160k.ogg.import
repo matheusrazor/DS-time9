@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Eric-Skiff-Underclocked-♫-NO-COPYRIGHT-8-bit-Music-Background_160k.ogg-1926355ab9c33a3da5a11e94004b1822.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/Eric-Skiff-Underclocked-♫-NO-COPYRIGHT-8-bit-Music-Background_160k.ogg"
+dest_files=[ "res://.import/Eric-Skiff-Underclocked-♫-NO-COPYRIGHT-8-bit-Music-Background_160k.ogg-1926355ab9c33a3da5a11e94004b1822.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

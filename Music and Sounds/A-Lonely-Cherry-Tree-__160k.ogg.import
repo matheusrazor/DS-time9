@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/A-Lonely-Cherry-Tree-__160k.ogg-9c5ff8526510006bc542889a5f5b1067.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/A-Lonely-Cherry-Tree-__160k.ogg"
+dest_files=[ "res://.import/A-Lonely-Cherry-Tree-__160k.ogg-9c5ff8526510006bc542889a5f5b1067.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/My-Best-Friend-is-aOGG.ogg-94b2f3fd6456208d8c7bf3df4d716c76.oggstr"
+
+[deps]
+
+source_file="res://Music and Sounds/My-Best-Friend-is-aOGG.ogg"
+dest_files=[ "res://.import/My-Best-Friend-is-aOGG.ogg-94b2f3fd6456208d8c7bf3df4d716c76.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
