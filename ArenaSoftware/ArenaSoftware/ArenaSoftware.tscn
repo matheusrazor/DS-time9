@@ -1,0 +1,327 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://ArquivosDS/ArenaEnergia/Sprites/cenario eletronica/FloorTexture.png" type="Texture" id=1]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/TextureTop3.png" type="Texture" id=2]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/BackGroundColor.png" type="Texture" id=3]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/Texture2.png" type="Texture" id=4]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/Area2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/Poste.png" type="Texture" id=6]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/softwareTable.png" type="Texture" id=7]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/Faixada Software copiar.png" type="Texture" id=9]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/ServerInteração.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Player/PlayerMacaco.gd" type="Script" id=11]
+[ext_resource path="res://Music and Sounds/A-Lonely-Cherry-Tree-__160k.ogg" type="AudioStream" id=12]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/MesaOrchestra.png" type="Texture" id=13]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/Tapete.png" type="Texture" id=14]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/PortaInteração.tscn" type="PackedScene" id=15]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/MinijogoSoftware.tscn" type="PackedScene" id=16]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/PCInteração.tscn" type="PackedScene" id=17]
+[ext_resource path="res://ArquivosDS/ArenaSoftware/MorcegoInteração.tscn" type="PackedScene" id=18]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 212.562, 30.4442 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 198.844, 9.96619 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.21768, 78.5556 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 90.5764 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 119.648, 78.5555 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7.1947, 94.8191 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 91.4345, 17.0099 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4.19714, 70.0509 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 193.667, 4.93318 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 72.8701, 20.7557 )
+
+[sub_resource type="RectangleShape2D" id=11]
+
+[sub_resource type="CapsuleShape2D" id=12]
+radius = 16.9346
+height = 90.3633
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 19.8461, 10 )
+
+[node name="ArenaSoftware" type="Node2D"]
+
+[node name="BackGroundColor" type="Sprite" parent="."]
+position = Vector2( 190.385, 87.7885 )
+scale = Vector2( 59.5313, 17.5 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 24, 65 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Chao1" type="Sprite" parent="."]
+position = Vector2( -94.1885, 98.0493 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+centered = false
+offset = Vector2( -5.23531, -23.6582 )
+region_enabled = true
+region_rect = Rect2( -677.548, 0, 803.168, 123.995 )
+
+[node name="Chao3" type="Sprite" parent="."]
+position = Vector2( 148.752, 167.503 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -116.811, -1, 595.899, 169.41 )
+
+[node name="Chão4" type="Sprite" parent="."]
+position = Vector2( 290.672, 109.919 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -86.8103, -1, 600.81, 375.905 )
+
+[node name="TexturaParede_copiar3" type="Sprite" parent="."]
+position = Vector2( 148.741, 127.923 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -196.388, -9.24934, 318.306, 166.556 )
+
+[node name="Parede 1" type="StaticBody2D" parent="."]
+position = Vector2( 38.3551, 80.1331 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite" type="Sprite" parent="Parede 1"]
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 427, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede 1"]
+position = Vector2( 0.6185, 1.24913 )
+shape = SubResource( 1 )
+
+[node name="Texturatop2" type="Sprite" parent="Parede 1"]
+position = Vector2( 19.9448, -35.7836 )
+scale = Vector2( 0.6, 0.5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -140, 21, 650, 24 )
+
+[node name="LadoDaPorta" type="Sprite" parent="Parede 1"]
+position = Vector2( -271.381, 35.3741 )
+rotation = 1.5708
+scale = Vector2( 0.46, 0.5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -146, 21, 262, 24 )
+
+[node name="Texturatop3" type="Sprite" parent="Parede 1"]
+position = Vector2( 219.738, 39.3837 )
+rotation = 1.5708
+scale = Vector2( 0.607205, 0.5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -146, 21, 262, 24 )
+
+[node name="Texturatop4" type="Sprite" parent="Parede 1"]
+position = Vector2( -78.0552, 102.216 )
+scale = Vector2( 0.6, 0.5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -152, 21, 662, 24 )
+
+[node name="Texturatop5" type="Sprite" parent="Parede 1"]
+position = Vector2( 114.945, 186.716 )
+rotation = 1.5708
+scale = Vector2( 0.6, 0.5 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -145, 21, 298, 24 )
+
+[node name="Faixada Software copiar" type="Sprite" parent="Parede 1"]
+position = Vector2( -447.19, -224.85 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 9 )
+offset = Vector2( 146.773, 96.0266 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parede 1"]
+position = Vector2( -77.0747, 104.652 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Parede 1"]
+position = Vector2( 222.032, 38.6605 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Parede 1"]
+position = Vector2( -273.65, 21.9203 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Parede 1"]
+position = Vector2( -152.028, -42.4264 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Parede 1"]
+position = Vector2( 114.076, 197.913 )
+shape = SubResource( 6 )
+
+[node name="Parede 3" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Parede 3"]
+position = Vector2( 379.595, 93.8546 )
+scale = Vector2( 0.478524, 0.5 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 6, 0, 371, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede 3"]
+position = Vector2( 382.817, 92.1459 )
+shape = SubResource( 7 )
+
+[node name="Texturatop10" type="Sprite" parent="Parede 3"]
+position = Vector2( 468.617, 146.08 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.25 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -170, 21, 488, 24 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parede 3"]
+position = Vector2( 470.402, 148.06 )
+shape = SubResource( 8 )
+
+[node name="Texturatop8" type="Sprite" parent="Parede 3"]
+position = Vector2( 282.056, 222.969 )
+scale = Vector2( 0.3, 0.25 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -1347, 21, 1256, 37 )
+
+[node name="Texturatop9" type="Sprite" parent="Parede 3"]
+position = Vector2( 378.343, 76.1066 )
+scale = Vector2( 0.3, 0.25 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -127, 21, 616, 24 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Parede 3"]
+position = Vector2( 285.833, 223.433 )
+shape = SubResource( 9 )
+
+[node name="Texturatop7" type="Sprite" parent="Parede 3"]
+position = Vector2( 287.663, 108.734 )
+rotation = 1.5708
+scale = Vector2( 0.3, 0.25 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -146, 19, 235, 26 )
+
+[node name="Parede 2" type="StaticBody2D" parent="."]
+
+[node name="Texture3" type="Sprite" parent="Parede 2"]
+position = Vector2( 218.307, 160.185 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 8, 0, 289, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede 2"]
+position = Vector2( 217.865, 155.408 )
+shape = SubResource( 10 )
+
+[node name="Texturatop6" type="Sprite" parent="Parede 2"]
+position = Vector2( 216.303, 141.793 )
+scale = Vector2( 0.3, 0.25 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( -129, 21, 474, 24 )
+
+[node name="softwareTable" type="Sprite" parent="Parede 2"]
+position = Vector2( 357.401, 103.814 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Parede 2"]
+position = Vector2( 357.054, 102.808 )
+shape = SubResource( 11 )
+
+[node name="MinijogoSoftware" parent="." instance=ExtResource( 16 )]
+
+[node name="Poste" type="Sprite" parent="."]
+position = Vector2( 134.193, 86.5838 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+
+[node name="Poste2" type="Sprite" parent="."]
+position = Vector2( 105.351, 194.087 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="Poste3" type="Sprite" parent="."]
+position = Vector2( 449.962, 191.84 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 6 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 386.847, 159.138 )
+scale = Vector2( 0.9, 0.9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tapete" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 0.879883, 6.97038 )
+scale = Vector2( 1.76142, 1.11111 )
+texture = ExtResource( 14 )
+
+[node name="MesaOrchestra" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0, -1.4715 )
+rotation = 1.5708
+shape = SubResource( 12 )
+
+[node name="Area2D" parent="." instance=ExtResource( 5 )]
+
+[node name="ServerInteração" parent="." instance=ExtResource( 10 )]
+position = Vector2( -2.82843, -6.01041 )
+
+[node name="PCInteração" parent="." instance=ExtResource( 17 )]
+
+[node name="ArenaSoftwareMusica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -9.26
+autoplay = true
+
+[node name="PortaInteração" parent="." instance=ExtResource( 15 )]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PortaInteração"]
+position = Vector2( 218.716, 167.044 )
+shape = SubResource( 13 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+position = Vector2( -42.6377, 113.097 )
+scale = Vector2( 0.9, 0.9 )
+script = ExtResource( 11 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.3, 0.3 )
+
+[node name="MorcegoInteração" parent="." instance=ExtResource( 18 )]
