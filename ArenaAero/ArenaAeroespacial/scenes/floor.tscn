@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites2/aero/cenario arena/FloorTexture.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="FloorTexture" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 64, 64 )
