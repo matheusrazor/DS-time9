@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/cenario eletronica/TextureTop_vertical_esquerda.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/cenario eletronica/TextureTop_vertical_direita.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureTop_vertical_direita" type="Sprite" parent="."]
+visible = false
+position = Vector2( -4.31353, 30.4714 )
+texture = ExtResource( 2 )
+centered = false
+region_rect = Rect2( 40, 0, 24, 64 )
+
+[node name="TextureTop_vertical_esquerda" type="Sprite" parent="."]
+visible = false
+position = Vector2( 27.6405, 39.0788 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 0, 24, 64 )
