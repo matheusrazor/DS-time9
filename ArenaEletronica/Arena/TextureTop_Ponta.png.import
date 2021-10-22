@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TextureTop_Ponta.png-99f5babef145c38a4263b81d614fd448.stex"
+path="res://.import/TextureTop_Ponta.png-0b23531a00b76e079678806791f3e06e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArquivosDS/ArenaEletronica/Arena/TextureTop_Ponta.png"
-dest_files=[ "res://.import/TextureTop_Ponta.png-99f5babef145c38a4263b81d614fd448.stex" ]
+source_file="res://ArquivosDS/ArenaEletronica/TextureTop_Ponta.png"
+dest_files=[ "res://.import/TextureTop_Ponta.png-0b23531a00b76e079678806791f3e06e.stex" ]
 
 [params]
 

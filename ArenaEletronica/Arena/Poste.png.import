@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Poste.png-013856eecb9d4d64329b2b99ca279f5e.stex"
+path="res://.import/Poste.png-17116b98cdbf27de08d65da9ef42fa8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArquivosDS/ArenaEletronica/Arena/Poste.png"
-dest_files=[ "res://.import/Poste.png-013856eecb9d4d64329b2b99ca279f5e.stex" ]
+source_file="res://ArquivosDS/ArenaEletronica/Poste.png"
+dest_files=[ "res://.import/Poste.png-17116b98cdbf27de08d65da9ef42fa8e.stex" ]
 
 [params]
 

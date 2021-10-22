@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Texture2.png-fcfadbab17252d62f21cfa7cbf6a368b.stex"
+path="res://.import/Texture2.png-d6ba2f22dd639b03e53f3e9f4e0db670.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArquivosDS/ArenaEletronica/Arena/Texture2.png"
-dest_files=[ "res://.import/Texture2.png-fcfadbab17252d62f21cfa7cbf6a368b.stex" ]
+source_file="res://ArquivosDS/ArenaEletronica/Texture2.png"
+dest_files=[ "res://.import/Texture2.png-d6ba2f22dd639b03e53f3e9f4e0db670.stex" ]
 
 [params]
 

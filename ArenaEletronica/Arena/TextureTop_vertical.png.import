@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TextureTop_vertical.png-a34fbf353f6713f4ab62db21269ab2b9.stex"
+path="res://.import/TextureTop_vertical.png-1d2a384255b0da4b2085a70031c7967c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArquivosDS/ArenaEletronica/Arena/TextureTop_vertical.png"
-dest_files=[ "res://.import/TextureTop_vertical.png-a34fbf353f6713f4ab62db21269ab2b9.stex" ]
+source_file="res://ArquivosDS/ArenaEletronica/TextureTop_vertical.png"
+dest_files=[ "res://.import/TextureTop_vertical.png-1d2a384255b0da4b2085a70031c7967c.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false

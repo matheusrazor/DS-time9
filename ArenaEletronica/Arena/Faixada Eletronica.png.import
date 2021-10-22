@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Faixada Eletronica.png-a890aaeff912212f865aba3884021a3b.stex"
+path="res://.import/Faixada Eletronica.png-2f5455d510db73a83efefe0cc0a14269.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArquivosDS/ArenaEletronica/Arena/Faixada Eletronica.png"
-dest_files=[ "res://.import/Faixada Eletronica.png-a890aaeff912212f865aba3884021a3b.stex" ]
+source_file="res://ArquivosDS/ArenaEletronica/Faixada Eletronica.png"
+dest_files=[ "res://.import/Faixada Eletronica.png-2f5455d510db73a83efefe0cc0a14269.stex" ]
 
 [params]
 
