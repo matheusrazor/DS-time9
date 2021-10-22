@@ -1,0 +1,355 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/MesaEletro.png" type="Texture" id=1]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/chave de fenda.png" type="Texture" id=2]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/eletronicTableSprite.png" type="Texture" id=3]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/Poste.png" type="Texture" id=4]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/garra.png" type="Texture" id=5]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/TapeteEletronica.png" type="Texture" id=6]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/pci1.png" type="Texture" id=7]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/PortaTrancada.png" type="Texture" id=8]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/Table.png" type="Texture" id=9]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/texturaTop_vertical.tres" type="TileSet" id=10]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/textura2.tres" type="TileSet" id=11]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/pontaTop.tres" type="TileSet" id=12]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/Chao.tres" type="TileSet" id=13]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/texturaTop_horizontal.tres" type="TileSet" id=14]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/textura1.tres" type="TileSet" id=15]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/tela lcd.png" type="Texture" id=16]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/pilha media.png" type="Texture" id=17]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/ferro de solda.png" type="Texture" id=18]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/pci3.png" type="Texture" id=19]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/pci_2.png" type="Texture" id=20]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Objetos/Robo.png" type="Texture" id=21]
+[ext_resource path="res://ArquivosDS/ArenaEletronica/Arena/Faixada Eletronica.png" type="Texture" id=22]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="Animation" id=4]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("eletronicTableSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 29.1176
+height = 212.364
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 5.16748, 26.8524 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 78.7598, 16.6956 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 235.325, 49.5461 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 25.9805, 84.6028 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 6.50012, 13.0444 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10.381, 3.87201 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 26.5024, 6.49307 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 61.7838, 14.3488 )
+
+[sub_resource type="SegmentShape2D" id=14]
+a = Vector2( -0.677979, 0.428604 )
+b = Vector2( -1.2467, 53.0291 )
+
+[node name="Arena de eletrônica" type="Node2D"]
+
+[node name="TexturaTop_vertical" type="TileMap" parent="."]
+tile_set = ExtResource( 10 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( 196588, 0, 0, 5768564, 0, 0, 7342092, 0, 0, 7865716, 0, 0, 8389516, 0, 0, 11536396, 0, 0, 12060020, 0, 0, 12583820, 0, 0, 15730700, 0, 0, 16254324, 0, 0, 16778124, 0, 0, 19464213, 0, 0, 19529749, 0, 0, 19595285, 0, 0, 19660822, 0, 0, 19726359, 0, 0, 19791895, 0, 0, 19857432, 0, 0, 19922969, 0, 0, 19925004, 0, 0, 19988506, 0, 0, 20054042, 0, 0, 20119579, 0, 0, 20185116, 0, 0, 20250653, 0, 0, 20316190, 0, 0, 20381726, 0, 0, 20447263, 0, 0, 20512800, 0, 0, 20578337, 0, 0, 20643874, 0, 0, 20709411, 0, 0, 20774948, 0, 0, 20840485, 0, 0, 20906021, 0, 0, 20971558, 0, 0, 21037095, 0, 0, 21102632, 0, 0, 21168169, 0, 0, 21233706, 0, 0, 21299243, 0, 0, 21364780, 0, 0, 21430317, 0, 0, 21495854, 0, 0, 21561391, 0, 0, 21626928, 0, 0, 21692464, 0, 0, 21758001, 0, 0, 21823538, 0, 0, 21889075, 0, 0, 21954612, 0, 0, 22020149, 0, 0, 22085686, 0, 0, 22085687, 0, 0, 22151224, 0, 0, 22216761, 0, 0, 22282298, 0, 0, 22347835, 0, 0, 22413372, 0, 0, 22478909, 0, 0, 22544446, 0, 0, 22609983, 0, 0, 22609984, 0, 0, 22675521, 0, 0, 22675522, 0, 0, 22741059, 0, 0, 22741060, 0, 0, 22806597, 0, 0, 22872134, 0, 0, 22937671, 0, 0, 23003208, 0, 0, 23003209, 0, 0, 23068746, 0, 0, 23134283, 0, 0, 23199820, 0, 0, 23265357, 0, 0, 23330894, 0, 0, 23396431, 0, 0, 23461968, 0, 0, 23527505, 0, 0, 23593042, 0, 0, 23658579, 0, 0, 23658580, 0, 0, 23724117, 0, 0, 23789654, 0, 0, 23855191, 0, 0, 23920728, 0, 0, 23986265, 0, 0, 24051802, 0, 0, 24051803, 0, 0, 24117340, 0, 0, 24119308, 0, 0, 24182877, 0, 0, 24182878, 0, 0, 24248415, 0, 0, 24313952, 0, 0, 24379489, 0, 0, 24445026, 0, 0, 24445027, 0, 0, 24510564, 0, 0, 24510565, 0, 0, 24576102, 0, 0, 24576103, 0, 0, 24576104, 0, 0, 24576105, 0, 0, 24576106, 0, 0, 24576107, 0, 0, 24576108, 0, 0, 24576109, 0, 0, 24576110, 0, 0, 24576111, 0, 0, 24576112, 0, 0, 24576113, 0, 0, 24576114, 0, 0, 24576115, 0, 0, 24576116, 0, 0, 24576117, 0, 0, 24576118, 0, 0, 24576119, 0, 0, 24576120, 0, 0, 25690804, 0, 0, 28313612, 0, 0, 29885108, 0, 0, 32507916, 0, 0, 34079412, 0, 0, 36702220, 0, 0, 38273716, 0, 0 )
+
+[node name="TextureTop_horizontal" type="TileMap" parent="."]
+tile_set = ExtResource( 14 )
+cell_size = Vector2( 16, 1 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 4391002, 0, 0, 4391006, 0, 0, 4391010, 0, 0, 4391014, 0, 0, 4391018, 0, 0, 4391022, 0, 0, 4391026, 0, 0, 4391030, 0, 0, 4391034, 0, 0, 4391038, 0, 0, 5439494, 0, 0, 5439495, 0, 0, 5439496, 0, 0, 5439497, 0, 0, 5439498, 0, 0, 5439514, 0, 0, 5439518, 0, 0, 5439522, 0, 0, 5439526, 0, 0, 5439530, 0, 0, 5439534, 0, 0, 5439538, 0, 0, 5439542, 0, 0, 19071034, 0, 0, 19071038, 0, 0, 19071042, 0, 0, 19071046, 0, 0, 19071050, 0, 0, 19071054, 0, 0, 19071058, 0, 0, 19071062, 0, 0, 22806526, 0, 0, 22740994, 0, 0, 22740998, 0, 0, 22741002, 0, 0, 22741006, 0, 0, 22741010, 0, 0, 22741014, 0, 0, 22741018, 0, 0, 22741022, 0, 0, 22741026, 0, 0, 22741030, 0, 0, 22741034, 0, 0, 39518254, 0, 0, 39518258, 0, 0, 39518262, 0, 0, 39518266, 0, 0, 39518270, 0, 0, 39518274, 0, 0, 39518278, 0, 0, 39518282, 0, 0, 39518286, 0, 0, 39518290, 0, 0, 39518294, 0, 0, 39518298, 0, 0, 39518302, 0, 0, 39518306, 0, 0, 39518310, 0, 0, 39518314, 0, 0, 39518318, 0, 0, 39518322, 0, 0, 39518326, 0, 0, 39518330, 0, 0, 39518334, 0, 0 )
+
+[node name="topo" type="TileMap" parent="."]
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -11141164, 1, 0, 4458508, 0, 0, 5570540, 0, 0, 5505932, 0, 0, 39585804, 0, 0 )
+
+[node name="Chão" type="TileMap" parent="."]
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Textura1" type="TileMap" parent="."]
+tile_set = ExtResource( 15 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 196625, 0, 0, 196626, 0, 0, 196627, 0, 0, 196628, 0, 0, 196629, 0, 0, 196630, 0, 0, 196631, 0, 0, 196632, 0, 0, 196633, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 65536, 262160, 0, 65536, 262161, 0, 1, 262162, 0, 0, 262163, 0, 1, 262164, 0, 1, 262165, 0, 65536, 262166, 0, 65537, 262167, 0, 65537, 262168, 0, 1, 262169, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 65536, 327695, 0, 0, 327696, 0, 1, 327697, 0, 65537, 327698, 0, 1, 327699, 0, 0, 327700, 0, 65536, 327701, 0, 1, 327702, 0, 1, 327703, 0, 0, 327704, 0, 65537, 327705, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 393232, 0, 0, 393233, 0, 0, 393234, 0, 0, 393235, 0, 0, 393236, 0, 0, 393237, 0, 0, 393238, 0, 0, 393239, 0, 0, 393240, 0, 0, 393241, 0, 0, 589851, 0, 0, 589853, 0, 0, 589855, 0, 0, 589857, 0, 0, 589859, 0, 0, 589861, 0, 0, 589863, 0, 0, 589865, 0, 0, 589867, 0, 0, 589869, 0, 0, 589871, 0, 0, 589873, 0, 0, 589875, 0, 0, 589877, 0, 0, 589879, 0, 0, 589880, 0, 0, 589914, 0, 0, 589916, 0, 0, 589918, 0, 0, 589920, 0, 0, 589922, 0, 0, 589924, 0, 0, 589926, 0, 0, 589928, 0, 0, 589930, 0, 0, 589932, 0, 0, 589934, 0, 0, 589936, 0, 0, 589938, 0, 0, 589940, 0, 0, 589942, 0, 0, 589944, 0, 0, 589946, 0, 0, 589948, 0, 0, 589950, 0, 0, 720922, 0, 0, 720924, 0, 0, 720926, 0, 0, 720928, 0, 0, 720930, 0, 0, 720932, 0, 0, 720934, 0, 0, 720936, 0, 0, 720938, 0, 0, 720940, 0, 0, 720942, 0, 0, 720944, 0, 0, 720946, 0, 0, 720948, 0, 0, 720950, 0, 0, 720952, 0, 0, 1572922, 0, 0, 1572924, 0, 0, 1572926, 0, 0, 1572928, 0, 0, 1572930, 0, 0, 1572932, 0, 0, 1572934, 0, 0, 1572938, 0, 0, 1572941, 0, 0, 1572942, 0, 0, 1572944, 0, 0, 1572946, 0, 0, 1572949, 0, 0, 1572950, 0, 0 )
+
+[node name="Textura2" type="TileMap" parent="."]
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458842, 0, 0, 458846, 0, 0, 458850, 0, 0, 458854, 0, 0, 458858, 0, 0, 458862, 0, 0, 458866, 0, 0, 458870, 0, 0, 458874, 0, 0, 458878, 0, 0, 524314, 0, 0, 524318, 0, 0, 524322, 0, 0, 524326, 0, 0, 524330, 0, 0, 524334, 0, 0, 524338, 0, 0, 524342, 0, 0, 1376314, 0, 0, 1376322, 0, 0, 1376326, 0, 0, 1376330, 0, 0, 1376334, 0, 0, 1376338, 0, 0, 1376342, 0, 0 )
+
+[node name="eletronicTableSprite" type="Sprite" parent="."]
+position = Vector2( 1686.35, 246.75 )
+scale = Vector2( 5.25, 6 )
+texture = ExtResource( 3 )
+hframes = 2
+region_rect = Rect2( 4, 17, 24, 14 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="eletronicTableSprite"]
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="Animação mesa" type="AnimationPlayer" parent="."]
+autoplay = "mesa piscando"
+method_call_mode = 1
+"anims/mesa piscando" = SubResource( 4 )
+
+[node name="ferro de solda" type="Sprite" parent="."]
+position = Vector2( 1721.98, 213.272 )
+scale = Vector2( 1.5, 2.5 )
+texture = ExtResource( 18 )
+centered = false
+
+[node name="mesa com objetos" type="Node2D" parent="."]
+position = Vector2( 726.481, -28.4408 )
+
+[node name="Table" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1091, 234 )
+scale = Vector2( 5.25, 6 )
+texture = ExtResource( 9 )
+
+[node name="pilha média" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1062, 250 )
+rotation = -0.172788
+texture = ExtResource( 17 )
+centered = false
+
+[node name="pilha média2" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1076, 250 )
+rotation = 0.34383
+texture = ExtResource( 17 )
+centered = false
+
+[node name="pci1" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1126, 266 )
+texture = ExtResource( 7 )
+
+[node name="pci_2" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1124, 277 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 20 )
+
+[node name="tela lcd" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1081, 278 )
+texture = ExtResource( 16 )
+
+[node name="pci3" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1110, 274 )
+rotation = -0.172788
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 19 )
+
+[node name="chave de fenda" type="Sprite" parent="mesa com objetos"]
+position = Vector2( 1050, 266 )
+rotation = -0.181514
+scale = Vector2( 1, 2 )
+texture = ExtResource( 2 )
+
+[node name="cenario" type="Node2D" parent="."]
+
+[node name="TapeteEletronica" type="Sprite" parent="cenario"]
+position = Vector2( 1770.35, 509.736 )
+scale = Vector2( 5.54085, 4.39673 )
+texture = ExtResource( 6 )
+
+[node name="PortaTrancada" type="Sprite" parent="cenario"]
+position = Vector2( 1182.14, 376.013 )
+scale = Vector2( 2.08188, 2.26299 )
+texture = ExtResource( 8 )
+
+[node name="Faixada Eletronica" type="Sprite" parent="cenario"]
+position = Vector2( 217, 142 )
+scale = Vector2( 3.49621, 2.97917 )
+texture = ExtResource( 22 )
+
+[node name="mesa3" type="StaticBody2D" parent="cenario"]
+position = Vector2( 171.079, 38.8672 )
+
+[node name="mesa" type="CollisionShape2D" parent="cenario/mesa3"]
+position = Vector2( 1587, 445 )
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[node name="pé1" type="CollisionShape2D" parent="cenario/mesa3"]
+position = Vector2( 1488.01, 502.211 )
+shape = SubResource( 6 )
+
+[node name="pé2" type="CollisionShape2D" parent="cenario/mesa3"]
+position = Vector2( 1687.67, 502.211 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cenario/mesa3"]
+position = Vector2( 1588.09, 397.367 )
+shape = SubResource( 7 )
+
+[node name="MesaEletro" type="Sprite" parent="cenario/mesa3"]
+position = Vector2( 1588.09, 459.477 )
+scale = Vector2( 2.20588, 2.96875 )
+texture = ExtResource( 1 )
+
+[node name="objetos" type="Node2D" parent="."]
+position = Vector2( 561, 125 )
+
+[node name="Robo" type="Sprite" parent="objetos"]
+position = Vector2( 1415.5, 149 )
+scale = Vector2( 1.67188, 2.07031 )
+texture = ExtResource( 21 )
+
+[node name="garra" type="Sprite" parent="objetos"]
+position = Vector2( 963, 160 )
+scale = Vector2( 2.67187, 3 )
+texture = ExtResource( 5 )
+
+[node name="postes" type="Node2D" parent="objetos"]
+
+[node name="Poste" type="Sprite" parent="objetos/postes"]
+position = Vector2( 333, 88 )
+scale = Vector2( 1.03906, 1.91667 )
+texture = ExtResource( 4 )
+
+[node name="Poste3" type="Sprite" parent="objetos/postes"]
+position = Vector2( 1482, 410 )
+scale = Vector2( 1.03906, 1.91667 )
+texture = ExtResource( 4 )
+
+[node name="Poste4" type="Sprite" parent="objetos/postes"]
+position = Vector2( 1486, 169 )
+scale = Vector2( 1.03906, 1.91667 )
+texture = ExtResource( 4 )
+
+[node name="Poste2" type="Sprite" parent="objetos/postes"]
+position = Vector2( 205, 411 )
+scale = Vector2( 1.03906, 1.91667 )
+texture = ExtResource( 4 )
+
+[node name="colisões" type="Node2D" parent="."]
+position = Vector2( -90.5097, -1.00017 )
+
+[node name="fachada" type="StaticBody2D" parent="colisões"]
+position = Vector2( 76.7598, 0 )
+
+[node name="parede1_superior" type="CollisionShape2D" parent="colisões/fachada"]
+position = Vector2( 213.59, 143.5 )
+shape = SubResource( 8 )
+
+[node name="Limitador_mapa" type="StaticBody2D" parent="colisões"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/Limitador_mapa"]
+position = Vector2( 53.4516, 286 )
+shape = SubResource( 9 )
+
+[node name="poste1" type="StaticBody2D" parent="colisões"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/poste1"]
+position = Vector2( 987.523, 268.04 )
+shape = SubResource( 10 )
+
+[node name="poste2" type="StaticBody2D" parent="colisões"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/poste2"]
+position = Vector2( 857.083, 590.432 )
+shape = SubResource( 10 )
+
+[node name="poste3" type="StaticBody2D" parent="colisões"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/poste3"]
+position = Vector2( 2136, 590.432 )
+shape = SubResource( 10 )
+
+[node name="poste4" type="StaticBody2D" parent="colisões"]
+position = Vector2( 90.5097, 1.00017 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/poste4"]
+position = Vector2( 2049.38, 347.99 )
+shape = SubResource( 10 )
+
+[node name="robo" type="StaticBody2D" parent="colisões"]
+position = Vector2( 90.5097, -37.4406 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/robo"]
+position = Vector2( 1976.5, 374.87 )
+shape = SubResource( 11 )
+
+[node name="robo2" type="StaticBody2D" parent="colisões"]
+position = Vector2( 90.5097, 1.00017 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colisões/robo2"]
+position = Vector2( 1524.04, 325.391 )
+shape = SubResource( 12 )
+
+[node name="mesa1" type="StaticBody2D" parent="colisões"]
+position = Vector2( 108.521, -44.9217 )
+
+[node name="mesa" type="CollisionShape2D" parent="colisões/mesa1"]
+position = Vector2( 1663.04, 272 )
+shape = SubResource( 13 )
+
+[node name="perna1" type="CollisionShape2D" parent="colisões/mesa1"]
+position = Vector2( 1603.03, 289 )
+shape = SubResource( 14 )
+
+[node name="perna2" type="CollisionShape2D" parent="colisões/mesa1"]
+position = Vector2( 1723.24, 289 )
+shape = SubResource( 14 )
+
+[node name="mesa2" type="StaticBody2D" parent="colisões"]
+position = Vector2( 244.661, -44.9217 )
+
+[node name="mesa" type="CollisionShape2D" parent="colisões/mesa2"]
+position = Vector2( 1663.04, 272 )
+shape = SubResource( 13 )
+
+[node name="perna1" type="CollisionShape2D" parent="colisões/mesa2"]
+position = Vector2( 1603.03, 289 )
+shape = SubResource( 14 )
+
+[node name="perna2" type="CollisionShape2D" parent="colisões/mesa2"]
+position = Vector2( 1723.24, 289 )
+shape = SubResource( 14 )
