@@ -1,7 +1,7 @@
 extends Area2D
 
 var interativo = false
-const dialog = preload("res://CaixasDeTexto/chitchat_rabbit.tscn")
+const dialog = preload("res://CaixasDeTexto/Cat&Monkey.tscn")
 
 
 func _on_GatoInterao_body_entered(body):
